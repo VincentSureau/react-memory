@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import GuessCount from './GuessCount'
+import Card from './Card'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="memory">
+        <GuessCount guesses={0} />
+        <Card card="😁" feedback="hidden" />
+        <Card card="😂" feedback="justMacthed" />
+        <Card card="😃" feedback="justMismatched" />
+        <Card card="😅" feedback="visible" />
+        <Card card="😆" feedback="hidden" />
+        <Card card="😍" feedback="justMatched" />
       </div>
-    );
+    )
   }
 }
 
