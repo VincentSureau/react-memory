@@ -5,8 +5,8 @@ import './Card.css'
 
 const HIDDEN_SYMBOL = '❓'
 
-const Card = ({card, feedback}) => (
-    <div className={`card ${feedback}`}>
+const Card = ({card, feedback, onClick}) => (
+    <div className={`card ${feedback}`} onClick={() => onClick(card)}>
         {feedback === 'hidden'? HIDDEN_SYMBOL : card}
     </div>
 )
