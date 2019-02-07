@@ -35,6 +35,7 @@ class App extends Component {
   // arrow function to guarantee "this" binding
   handleCardClick = (index) => {
     const { matchedCardIndices } = this.state
+    
     if( !matchedCardIndices.includes(index) ){
       const { currentPair } = this.state
       if (currentPair.length === 2) {
